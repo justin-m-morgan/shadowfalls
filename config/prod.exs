@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :shadowfalls, ShadowfallsWeb.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "infinite-basin-65030.herokuapp.com", port: 443],
+  url: [scheme: "https", host: System.get_env("DEPLOY_URL"), port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 

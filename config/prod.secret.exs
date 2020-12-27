@@ -12,9 +12,10 @@ database_url =
     """
 
 config :shadowfalls, Shadowfalls.Repo,
+  adapter: Ecto.Adapters.Postgres,
   ssl: true,
   url: database_url,
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "2")
 
 secret_key_base =
   System.get_env("SECRET_KEY_BASE") ||

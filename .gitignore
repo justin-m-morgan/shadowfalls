@@ -36,5 +36,5 @@ npm-debug.log
 # this depending on your deployment strategy.
 /priv/static/
 
-# iex init script 
+# IEX init script 
 .iex.exs
